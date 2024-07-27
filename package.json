@@ -1,0 +1,40 @@
+{
+  "name": "nimble-events",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Nimble Events",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "deploy": "strapi deploy"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18"
+  },
+  "dependencies": {
+    "@strapi/strapi": "0.0.0-experimental.f31889311d753b5f7d95198ae84d8fce1d156cd6",
+    "@strapi/plugin-users-permissions": "0.0.0-experimental.f31889311d753b5f7d95198ae84d8fce1d156cd6",
+    "@strapi/plugin-cloud": "0.0.0-experimental.f31889311d753b5f7d95198ae84d8fce1d156cd6",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0",
+    "better-sqlite3": "9.4.3"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "6ba5b022-3879-45a7-851a-bb2c3c93f425"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
