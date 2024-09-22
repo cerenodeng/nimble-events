@@ -10,11 +10,12 @@ export default async function Events() {
   // console.log(JSON.stringify(events, null, 2));
 
   return (
-    <div>
+    <div className='p-20'>
       <h2 className='text-3xl font-semibold'>Events</h2>
-      {events.map((event) => (
-        <div className='flex flex-col' key={event.id}>
-          {event.media && (
+      <div className='grid grid-cols-4 gap-10'>
+        {events.map((event) => (
+          <div className='card bg-base-100 w-96 shadow-xl' key={event.id}>
+            {/* {event.media && (
             <div className='flex gap-x-10'>
               {event.media.map((file) => (
                 <img
@@ -24,10 +25,21 @@ export default async function Events() {
                 />
               ))}
             </div>
-          )}
-          <div>{event.title}</div>
-        </div>
-      ))}
+          )} */}
+            <figure>
+              {event.media && (
+                <img
+                  src={`http://localhost:1337${event.media[0].formats.medium.url}`}
+                  alt={event.title}
+                />
+              )}
+            </figure>
+            <div className='card-body'>
+              <h2 className='card-title'>{event.title}</h2>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
