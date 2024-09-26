@@ -25,14 +25,18 @@ export default async function Home() {
           )} */}
             <figure>
               {event.media && (
-                <img
-                  src={`http://localhost:1337${event.media[0].formats.medium.url}`}
-                  alt={event.title}
-                />
+                <a href={`/events/${event.id}`}>
+                  <img
+                    src={`http://localhost:1337${event.media[0].formats.medium.url}`}
+                    alt={event.title}
+                  />
+                </a>
               )}
             </figure>
             <div className='card-body'>
-              <h2 className='card-title'>{event.title}</h2>
+              <h2 className='card-title'>
+                <a href={`/events/${event.id}`}>{event.title}</a>
+              </h2>
             </div>
           </div>
         ))}
